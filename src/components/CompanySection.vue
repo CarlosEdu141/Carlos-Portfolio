@@ -2,6 +2,8 @@
 import SectionLabel from './SectionLabel.vue'
 import ChipList from './ChipList.vue'
 import { company } from '../data/company.js'
+
+const wolfIconUrl = `${import.meta.env.BASE_URL}FenrysIcon.webp`
 </script>
 
 <template>
@@ -15,7 +17,7 @@ import { company } from '../data/company.js'
       <div class="grid">
         <div class="text-col" v-reveal>
           <div class="wordmark">
-            <img src="/FenrysIcon.webp" alt="" class="wolf" aria-hidden="true" />
+            <img :src="wolfIconUrl" alt="" class="wolf" aria-hidden="true" />
             <span class="name">{{ company.name.split(' ')[0] }}<span class="name-sub">TECH</span></span>
           </div>
           <p class="tagline">{{ company.tagline }}</p>

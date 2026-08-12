@@ -12,7 +12,7 @@ export const profile = {
   bio: {
     lead: 'Engenheiro de Software formado, com experiência prática no desenvolvimento e gestão de sistemas corporativos.',
     body: 'Atuando como Líder de Desenvolvimento da plataforma CHARLES e sócio-fundador da Fenrys Tech, busco oportunidades que ampliem meu desenvolvimento profissional e permitam aplicar minhas habilidades em novos desafios.',
-    photo: { url: '/CarlosFoto.jpg', alt: 'Foto de Carlos Eduardo Tiago' },
+    photo: { url: `${import.meta.env.BASE_URL}CarlosFoto.jpg`, alt: 'Foto de Carlos Eduardo Tiago' },
   },
   stats: [
     { number: '2+', label: 'ANOS EM SISTEMA\nCORPORATIVO' },
@@ -31,7 +31,7 @@ export const profile = {
     period: 'Fev 2022 — Jun 2026',
   },
   resume: {
-    url: '/Curriculo_CarlosEduardoTiago.pdf',
+    url: `${import.meta.env.BASE_URL}Curriculo_CarlosEduardoTiago.pdf`,
     filename: 'Curriculo_CarlosEduardoTiago.pdf',
   },
   contact: {
