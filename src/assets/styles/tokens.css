@@ -1,0 +1,132 @@
+:root {
+  /* Cores base */
+  --bg: #06070a;
+  --bg-alt: #080a0e;
+  --bg-card: #0a0d12;
+  --bg-card-hover: #0b1119;
+
+  /* Acento */
+  --accent: #38bdf8;
+  --accent-rgb: 56, 189, 248;
+  --accent-strong: #0ea5e9;
+  --accent-deep: #2563eb;
+  --accent-light: #7dd3fc;
+  --accent-light-rgb: 125, 211, 252;
+  --on-accent: #03121b;
+
+  /* Texto */
+  --text: #e6edf5;
+  --text-bright: #f2f7fc;
+  --text-soft: #dde8f2;
+  --text-muted: #8fa0b3;
+  --text-dim: #7b8c9f;
+  --text-faint: #6b7a8c;
+  --text-ghost: #4d5c6d;
+  --chip-text: #cfe2f2;
+  --chip-text-alt: #a8bccf;
+
+  /* Bordas e divisores (sempre rgba(var(--accent-rgb|--accent-light-rgb), alpha) nos componentes) */
+  --border-section: rgba(var(--accent-rgb), 0.1);
+  --border-inner: rgba(var(--accent-rgb), 0.12);
+  --border-card: rgba(var(--accent-rgb), 0.14);
+  --border-card-strong: rgba(var(--accent-rgb), 0.16);
+  --border-chip-lab: rgba(var(--accent-rgb), 0.18);
+
+  /* Gradientes */
+  --gradient-hero-bg: radial-gradient(120% 90% at 50% 106%, #0b2236 0%, #080a0e 55%, #06070a 100%);
+  --gradient-contact-bg: radial-gradient(90% 120% at 50% 0%, #0b2236 0%, #080a0e 60%, #06070a 100%);
+  --gradient-hero-vignette: radial-gradient(58% 46% at 50% 42%, rgba(6, 7, 10, 0.88) 0%, rgba(6, 7, 10, 0.44) 58%, transparent 100%);
+  --gradient-text: linear-gradient(96deg, #7dd3fc, #0ea5e9 46%, #2563eb);
+  --gradient-text-contact: linear-gradient(96deg, #7dd3fc, #0ea5e9 50%, #2563eb);
+  --veil-photo: linear-gradient(150deg, rgba(4, 10, 18, 0.5), rgba(37, 99, 235, 0.34) 60%, rgba(14, 165, 233, 0.26));
+
+  /* Acento da Fenrys Tech — deliberadamente fora da paleta azul do site,
+     usado só na CompanySection para citar a identidade visual da empresa. */
+  --brand-fenrys-rgb: 139, 92, 246;
+  --gradient-fenrys: linear-gradient(96deg, #6366f1, #8b5cf6 55%, #a855f7);
+
+  /* Verde do WhatsApp — mesma exceção deliberada, usado só no feedback de
+     clique do botão "Chamar no WhatsApp" em ContactSection. */
+  --whatsapp-green: #25d366;
+
+  /* Tipografia */
+  --font-sora: Sora, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Raios */
+  --radius-card: 14px;
+  --radius-panel: 12px;
+  --radius-btn: 6px;
+  --radius-pill: 999px;
+  --radius-tag: 4px;
+
+  /* Espaçamento */
+  --section-padding: 130px 40px 120px;
+  --content-max: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sora);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-light);
+}
+
+::selection {
+  background: var(--accent-strong);
+  color: var(--on-accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.12;
+  }
+}
+
+@keyframes scan {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(400%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
